@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class TheHighest{
+     public static int temps[] = {34, 32, 40, 50, 55, 70, 73, 75, 
+         70, 65, 55, 40};
+     public static String months[] = {"Jan", "Feb", "Mar", "Apr", 
+         "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"};
+    static int largest()
+    {
+        int i;
+        int max = 0;
+        for (i = 0; i < temps.length; i++){
+            if (temps[i] > temps[max]){
+                max = i;
+            }
+        }
+        return max;
+    }
+    static String month(int index){
+        return months[index];
+    }
+    public static void main(String[] args){
+        System.out.println(month(largest()) + " - " + temps[largest()]);
+    }
+}
